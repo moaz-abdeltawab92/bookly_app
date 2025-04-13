@@ -8,7 +8,8 @@ class BookDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: BookDetailsViewBody(),
+      //safeArea make sure that the content is not cut off from StatusBar
+      body: SafeArea(child: BookDetailsViewBody()),
     );
   }
 }
