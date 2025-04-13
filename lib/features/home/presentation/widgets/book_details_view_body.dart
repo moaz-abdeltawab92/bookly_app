@@ -1,6 +1,9 @@
+import 'package:bookly_app/features/home/presentation/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/widgets/custom_book_details_app_bar.dart';
 import 'package:bookly_app/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../core/utils/styles.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -18,9 +21,30 @@ class BookDetailsViewBody extends StatelessWidget {
             child: const CustomBookImage(),
           ),
           const SizedBox(
-            height: 15,
+            height: 43,
           ),
-          Text("Moaz Ayman")
+          const Text(
+            "Moaz Ayman",
+            style: Styles.textStyle30,
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Opacity(
+            opacity: 0.7,
+            child: Text(
+              "The Junkle book",
+              style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const BookRating(),
+          const SizedBox()
         ],
       ),
     );
