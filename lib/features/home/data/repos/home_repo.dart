@@ -8,7 +8,7 @@ abstract class HomeRepo {
   Repo Pattern is used to create methods,
    but without implementation, just what Feature will do
   */
-  Future<Either<Failure, List<BookModel>>> fetchBestSellerBooks();
+  Future<Either<Failure, List<BookModel>>> fetchNewestBooks();
   Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
   //Either class is used to specific two types of return failed or success
 }
