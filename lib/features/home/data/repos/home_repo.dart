@@ -1,6 +1,14 @@
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
+import 'package:dartz/dartz.dart';
+
+import '../../../../core/errors/failures.dart';
+
 abstract class HomeRepo {
-  //Repo Pattern is just used to create methods,
-  //but without implementation and what Feature will do
-  Future<void> fetchBestSellerBooks();
-  Future<void> fetchFeaturedBooks();
+  /*
+  Repo Pattern is used to create methods,
+   but without implementation, just what Feature will do
+  */
+  Future<Either<Failure, List<BookModel>>> fetchBestSellerBooks();
+  Future<Either<Failure, List<BookModel>>> fetchFeaturedBooks();
+  //Either class is used to specific two types of return failed or success
 }
