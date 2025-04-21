@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -37,12 +39,16 @@ class ServerFailure extends Failure {
   }
 
   factory ServerFailure.fromResponse(int statusCode, dynamic response) {
+    log(" statusCode: $statusCode");
+    log(" response: $response");
     if (statusCode == 400 || statusCode == 401 || statusCode == 403) {
       return ServerFailure(response["error"]["message"]);
     } else if (statusCode == 404) {
       return ServerFailure("Your request not found, please try later");
     } else if (statusCode == 500) {
       return ServerFailure("Internal Server Error, please try later");
+    } else if (statusCode == 429) {
+      return ServerFailure("Too many requests, please try again later");
     } else {
       return ServerFailure("Oops There was an Error, please try again");
     }
