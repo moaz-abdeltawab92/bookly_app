@@ -2,7 +2,7 @@ import 'package:bookly_app/features/search/presentation/views/widgets/custom_tex
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/widgets/best_seller_list_view_item.dart';
+import '../../../../home/presentation/widgets/newest_books_list_view_item.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -46,7 +46,8 @@ class SearchResultListView extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             vertical: 10.0,
           ),
-          child: BookListViewItem(),
+          // child: BookListViewItem(),
+          child: Text("data"),
         );
       },
     );

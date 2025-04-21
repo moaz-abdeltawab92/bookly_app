@@ -16,6 +16,8 @@ class VolumeInfo extends Equatable {
   final int? pageCount;
   final String? printType;
   final List<String>? categories;
+  final int? ratingsCount;
+  final int? averageRating;
   final String? maturityRating;
   final bool? allowAnonLogging;
   final String? contentVersion;
@@ -29,6 +31,8 @@ class VolumeInfo extends Equatable {
   const VolumeInfo({
     this.title,
     this.authors,
+    this.ratingsCount,
+    this.averageRating,
     this.publisher,
     this.publishedDate,
     this.description,
@@ -51,6 +55,8 @@ class VolumeInfo extends Equatable {
   factory VolumeInfo.fromJson(Map<String, dynamic> json) => VolumeInfo(
         title: json['title'] as String?,
         authors: (json['authors'] as List<dynamic>?)?.cast<String>(),
+        ratingsCount: json['ratingsCount'] as int?,
+        averageRating: json['averageRating'] as int?,
         publisher: json['publisher'] as String?,
         publishedDate: json['publishedDate'] as String?,
         description: json['description'] as String?,
@@ -82,6 +88,8 @@ class VolumeInfo extends Equatable {
   Map<String, dynamic> toJson() => {
         'title': title,
         'authors': authors,
+        'ratingsCount': ratingsCount,
+        'averageRating': averageRating,
         'publisher': publisher,
         'publishedDate': publishedDate,
         'description': description,
@@ -106,6 +114,8 @@ class VolumeInfo extends Equatable {
   List<Object?> get props {
     return [
       title,
+      ratingsCount,
+      averageRating,
       authors,
       publisher,
       publishedDate,
