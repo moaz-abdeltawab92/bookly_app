@@ -1,4 +1,3 @@
-import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/features/home/presentation/widgets/book_rating.dart';
 import 'package:bookly_app/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:flutter/material.dart';
@@ -62,7 +61,8 @@ class BookListViewItem extends StatelessWidget {
                       const Spacer(),
                       BookRating(
                         rating: bookModel.volumeInfo.averageRating ?? 0,
-                        count: bookModel.volumeInfo.ratingsCount ?? 0,
+                        count: bookModel.volumeInfo.ratingsCount?.toDouble() ??
+                            0.0,
                       ),
                     ],
                   )

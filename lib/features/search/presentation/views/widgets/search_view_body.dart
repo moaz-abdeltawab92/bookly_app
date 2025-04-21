@@ -2,7 +2,6 @@ import 'package:bookly_app/features/search/presentation/views/widgets/custom_tex
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/widgets/newest_books_list_view_item.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
