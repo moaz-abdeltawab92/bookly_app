@@ -45,5 +45,17 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>https</string>
+</array>
+
+<key>NSAppTransport Security</key> 
+<dict> 
+<key>NSAllows Arbitrary Loads</key> 
+<true/> 
+</dict>
+
 </dict>
 </plist>
