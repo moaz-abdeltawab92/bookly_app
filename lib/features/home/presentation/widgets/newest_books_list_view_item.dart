@@ -37,7 +37,7 @@ class BookListViewItem extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
                       bookModel.volumeInfo.title!,
-                      maxLines: 2,
+                      maxLines: 1,
                       //TextOverflow.ellipsis --> to show ..... after text
                       overflow: TextOverflow.ellipsis,
                       style: Styles.textStyle20
